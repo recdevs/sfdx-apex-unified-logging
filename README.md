@@ -1,11 +1,26 @@
-# Apex Unified Logging [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3814b20244d14e3d846ff05dfd3c2e2a)](https://www.codacy.com/app/rsoesemann/apex-unified-logging?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rsoesemann/apex-unified-logging&amp;utm_campaign=Badge_Grade)
-
-<a href="https://githubsfdeploy.herokuapp.com?owner=rsoesemann&repo=apex-unified-logging">
-  <img alt="Deploy to Salesforce"
-       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
-</a>
+# Apex Unified Logging - SFDX Unlocked Namespaced Package
 
 Logging framework based on Salesfore Platform Events to overcome the limitations of `System.debug` logging.
+
+## Install: ##
+
+- Installation URL: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5w000000iFisAAE
+- Install from command line: `sfdx force:package:install -p 04t5w000000iFisAAE`
+
+## Usage: ##
+
+- Note 'My Domain' should be enabled in the org before using the log monitor
+- Enable a trace:
+  - Open Custom Settings setup page
+  - select 'Settings' in aul namespace
+  - select 'Manage' button
+  - add a new Setting record (not org default)
+  - enable for your user for the current date
+- Open 'Sample App (Unified Logging)' (may need to be enabled in profile settings)
+  - if the log monitor utility bar does not appear at the bottom of the screen then ensure 'My Domain' is enabled
+- Open the log monitor from the utility bar at the bottom of the screen
+- Execute `aul.Log.debug('test');`
+- A log entry should appear in the monitor
 
 ## Features: ##
  - Provides unified view of logs over transaction boundaries (a.k.a. execution contexts)
@@ -14,7 +29,7 @@ Logging framework based on Salesfore Platform Events to overcome the limitations
  - Autodetection of Code Location 
  - Nice UI using a Lightning Utility Bar 
  - Activated using user-level custom settings
- - Easily extendible to report exceptions and Governor Limit state
+ - Easily extendable to report exceptions and Governor Limit state
  
 ## Screenshots: ##
 

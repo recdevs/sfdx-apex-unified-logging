@@ -1,4 +1,4 @@
-public with sharing class Log {
+global with sharing class Log {
 
 	private static final Boolean LOG_VIA_EVENTS = logViaEvents();
 	private static final String ORG_NAMESPACE = [SELECT NamespacePrefix FROM Organization].NamespacePrefix;
@@ -7,54 +7,54 @@ public with sharing class Log {
 	private static final String THIS_CONTEXT = timestamp();
 
 
-	// PUBLIC
+	// GLOBAL
 
-	public static void debug(String message) {
+	global static void debug(String message) {
 		debug(message, new List<Object>(), null);
 	}
 
 
-	public static void debug(String message, List<Object> values) {
+	global static void debug(String message, List<Object> values) {
 		debug(message, values, null);
 	}
 
 
-	public static void debug(String message, Id contextId) {
+	global static void debug(String message, Id contextId) {
 		debug(message, new List<Object>(), contextId);
 	}
 
 
-	public static void debug(Id contextId) {
+	global static void debug(Id contextId) {
 		debug('', new List<Object>(), contextId);
 	}
 
 
-	public static void debug(String message, List<Object> values, Id contextId) {
+	global static void debug(String message, List<Object> values, Id contextId) {
 		emit(message, values, contextId, LoggingLevel.DEBUG);
 	}
 
 
-	public static void error(String message) {
+	global static void error(String message) {
 		error(message, new List<Object>(), null);
 	}
 
 
-	public static void error(String message, List<Object> values) {
+	global static void error(String message, List<Object> values) {
 		error(message, values, null);
 	}
 
 
-	public static void error(String message, Id contextId) {
+	global static void error(String message, Id contextId) {
 		error(message, new List<Object>(), contextId);
 	}
 
 
-	public static void error(Id contextId) {
+	global static void error(Id contextId) {
 		error('', new List<Object>(), contextId);
 	}
 
 
-	public static void error(String message, List<Object> values, Id contextId) {
+	global static void error(String message, List<Object> values, Id contextId) {
 		emit(message, values, contextId, LoggingLevel.ERROR);
 	}
 

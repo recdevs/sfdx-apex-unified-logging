@@ -1,14 +1,17 @@
 {
-	"packageDirectories": [
-			{
-					"path": "src",
-					"default": true,
-					"package": "aul",
-					"versionName": "VERSION 1",
-					"versionNumber": "1.0.0.NEXT"
-			}
-	],
-	"namespace": "aul",
-	"sfdcLoginUrl": "https://login.salesforce.com",
-	"sourceApiVersion": "48.0"
+    "packageDirectories": [
+        {
+            "path": "src",
+            "package": "apexunifiedlogging",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.2.NEXT",
+            "default": true
+        }
+    ],
+    "namespace": "aul",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "48.0",
+    "packageAliases": {
+        "apexunifiedlogging": "0Ho5w000000fxURCAY"
+    }
 }

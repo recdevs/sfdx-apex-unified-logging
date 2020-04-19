@@ -45,7 +45,7 @@
 
         const empApi = cmp.find("empApi");
         empApi.onError($A.getCallback(errorHandler));
-        empApi.subscribe("/event/Log__e", -1, $A.getCallback(callback)).then($A.getCallback(function (subscription) {
+        empApi.subscribe("/event/aul__Log__e", -1, $A.getCallback(callback)).then($A.getCallback(function (subscription) {
             cmp.set("v.subscription", subscription);
         }));
     },
