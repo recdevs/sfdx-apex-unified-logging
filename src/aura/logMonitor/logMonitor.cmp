@@ -33,7 +33,7 @@
             <lightning:treeGrid aura:id="tree"
                                 columns="{!v.columns}"
                                 data="{!v.treeData}"
-                                keyField="txt_Context__c"
+                                keyField="aul__txt_Context__c"
                                 hideCheckboxColumn="true" />
         </div>
     </div>

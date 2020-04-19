@@ -15,18 +15,18 @@
             },
             {
                 type: "text",
-                fieldName: "txt_Class__c",
+                fieldName: "aul__txt_Class__c",
                 label: "Class",
                 initialWidth: 200
             },
             {
                 type: "text",
-                fieldName: "txt_Method__c",
+                fieldName: "aul__txt_Method__c",
                 label: "Method"
             },
             {
                 type: "text",
-                fieldName: "txl_Message__c",
+                fieldName: "aul__txl_Message__c",
                 label: "Message",
                 initialWidth: 200
             },
@@ -74,7 +74,7 @@
 
 
     store: function(cmp, log) {
-        const context = log.txt_Context__c;
+        const context = log.aul__txt_Context__c;
 
         let logs = cmp.get("v.logs") || {};
         logs[context] = logs[context] || [];
@@ -107,6 +107,6 @@
 
 
     isCurrentUser: function(log) {
-        return (log.txt_User__c === $A.get("$SObjectType.CurrentUser.Id"));
+        return (log.aul__txt_User__c === $A.get("$SObjectType.CurrentUser.Id"));
     },
 });
